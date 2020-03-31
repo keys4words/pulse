@@ -1,16 +1,17 @@
-var name = 'Max';
-let number = 432;
-const pi = 3.14;
-
-let isChecked = true,
-    isShow = false;
-if(isChecked && 8+2==10){
-    console.log(isChecked + ' - ' + isShow);
-}
-function showCycle(qty) {
-    for (let i = 0; i < qty; i++) {
-        console.log(i);
-    }    
-}
-showCycle(3);
-
+$(document).ready(function () {
+    $('.carousel__inner').slick({
+        speed: 1200,
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    dots: true,
+                    arrows: false
+                }
+            }
+        ]
+    });
+});
